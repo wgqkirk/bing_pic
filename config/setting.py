@@ -11,3 +11,7 @@ SQL_DB='check_test'
 #flask 登录信息
 SERVER_PORT = 8888
 SALT = 'mysalt'
+
+
+#wehcat_token
+WECHAT_TOKEN='wgqkirk'
