@@ -21,7 +21,13 @@ def getPicUrl():
     nonce=request.args.get("nonce")
     echostr=request.args.get("echostr")
     token=WECHAT_TOKEN
-    final_str=hashlib.sha1(token+timestamp+nonce).hexdigest()
+    list = [token, timestamp, nonce]
+    list.sort()
+    temp = ''.join(list)
+    print(signature,timestamp,nonce,echostr)
+    final_str=hashlib.sha1(temp.encode('utf8')).hexdigest()
+    print(final_str)
+    print(signature)
     if final_str==signature:
         return echostr
     sql='SELECT * FROM `bing_pic` ORDER BY RAND() LIMIT 1'
