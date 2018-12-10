@@ -9,7 +9,7 @@ SQL_DB='check_test'
 
 
 #flask 登录信息
-SERVER_PORT = 8888
+SERVER_PORT = 80
 SALT = 'mysalt'
 
 
